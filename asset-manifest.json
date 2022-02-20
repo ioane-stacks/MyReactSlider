@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MyReactSlider/static/css/main.216bedc1.css",
+    "main.js": "/MyReactSlider/static/js/main.7819f545.js",
+    "index.html": "/MyReactSlider/index.html",
+    "main.216bedc1.css.map": "/MyReactSlider/static/css/main.216bedc1.css.map",
+    "main.7819f545.js.map": "/MyReactSlider/static/js/main.7819f545.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.216bedc1.css",
+    "static/js/main.7819f545.js"
+  ]
+}
