@@ -41,8 +41,9 @@
   user-select: none;
 }
 
+
 .forward {
-  width: 100px;
+  width: 5rem;
   height: 100%;
   top: 0;
   left: 0;
@@ -52,15 +53,18 @@
   color: #ccc;
   z-index: 1;
   font-size: 5rem;
+  opacity: 0;
+  outline: none;
   transition: .3s;
 }
 
 .forward:hover {
   background-color: rgba(51, 51, 51, 0.2);
+  opacity: 1;
 }
 
 .next {
-  width: 100px;
+  width: 5rem;
   height: 100%;
   top: 0;
   right: 0;
@@ -70,11 +74,27 @@
   color: #ccc;
   z-index: 1;
   font-size: 5rem;
+  opacity: 0;
+  outline: none;
   transition: .3s;
 }
 
 .next:hover {
   background-color: rgba(51, 51, 51, 0.2);
+  opacity: 1;
+}
+
+.image-counter {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #aaa;
+  color: #333;
+  text-align: center;
+  z-index: 1;
 }
 
 .slider-source {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 const Slider = ({ images }) => {
     const [index, setIndex] = useState(0);
@@ -10,6 +10,17 @@ const Slider = ({ images }) => {
         setIndex(index === 0 ? images.length - 1 : index - 1);
     }
 
+    const handleChange = (e) => {
+        if (e.key === "ArrowRight") nextPicture();
+        if (e.key === "ArrowLeft") previousPicture();
+    }
+    useEffect(() => {
+        window.addEventListener('keydown', handleChange)
+        return () => {
+            window.removeEventListener('keydown', handleChange);
+        }
+    }, [handleChange]);
+
     return (
         <div id="slider-container">
             <button className="forward" onClick={previousPicture}>
@@ -19,6 +30,7 @@ const Slider = ({ images }) => {
             <button className="next" onClick={nextPicture}>
                 <FaAngleRight />
             </button>
+            <p className="image-counter">{index + 1} of {images.length}</p>
         </div >
     );
 }
